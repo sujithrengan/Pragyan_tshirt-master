@@ -15,26 +15,25 @@ public class SplashScreen extends Activity {
         Utilities.init();
         Utilities.prefs = getSharedPreferences("check_" + "status", 0);
         Utilities.status = Utilities.prefs.getInt("status", 0);
-        if(Utilities.status!=0)
-        {
-            Utilities.username = Utilities.prefs.getString("user_name","User");
-            Utilities.password = Utilities.prefs.getString("user_pass","Password");
-            Utilities.coupon=Utilities.prefs.getString("coupon","meh.");
+        if (Utilities.status != 0) {
+            Utilities.username = Utilities.prefs.getString("user_name", "User");
+            Utilities.password = Utilities.prefs.getString("user_pass", "Password");
+            Utilities.coupon = Utilities.prefs.getString("coupon", "meh.");
         }
         Intent i;
 
-        Log.e("spash",String.valueOf(Utilities.status)+Utilities.coupon);
-        switch(Utilities.status)
-        {
-            case 0:i=new Intent(this,LoginActivity.class);
+        Log.e("splash", String.valueOf(Utilities.status) + Utilities.coupon);
+        switch (Utilities.status) {
+            case 0:
+                i = new Intent(this, LoginActivity.class);
                 startActivity(i);
                 break;
             case 1:
-                i = new Intent(this,Coupon.class);
+                i = new Intent(this, Coupon.class);
                 startActivity(i);
                 break;
             default:
-                i = new Intent(this,WelcomePage.class);
+                i = new Intent(this, WelcomePage.class);
                 startActivity(i);
                 break;
         }

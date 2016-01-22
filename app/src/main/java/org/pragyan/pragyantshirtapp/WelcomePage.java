@@ -1,10 +1,13 @@
 package org.pragyan.pragyantshirtapp;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
@@ -56,14 +59,14 @@ public class WelcomePage extends ActionBarActivity {
         setContentView(R.layout.activity_welcome_page);
         TextView welcomeText = (TextView) findViewById(R.id.welcomeText);
         welcomeText.setText(welcomeText.getText().toString() + Utilities.username);
-         couponButton= (Button) findViewById(R.id.couponSelect);
+        couponButton = (Button) findViewById(R.id.couponSelect);
         couponButton.setText(Utilities.coupon);
         couponButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
-                Log.e("bb","bb");
-                if(!Utilities.coupon.equals("meh.")) {
+                Log.e("bb", "bb");
+                if (!Utilities.coupon.equals("meh.")) {
                     ClipData clip = ClipData.newPlainText("couponCode", Utilities.coupon);
                     clipboard.setPrimaryClip(clip);
 
@@ -73,26 +76,25 @@ public class WelcomePage extends ActionBarActivity {
             }
         });
 
-        TextView hlptxt =(TextView)findViewById(R.id.helpText);
-
-         popupText = new TextView(this);
-        layoutOfPopup = new LinearLayout(this);
-        popupText.setText("This is Popup Window.press OK to dismiss it."); popupText.setPadding(0, 0, 0, 20);
-        layoutOfPopup.setOrientation(LinearLayout.HORIZONTAL);
-        layoutOfPopup.addView(popupText);
-
-
+        TextView hlptxt = (TextView) findViewById(R.id.helpText);
 
         hlptxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+//DIALOG INSTRUCTIONS MUST BE CHANGED
+                new AlertDialog.Builder(WelcomePage.this)
+                        .setTitle("Coupon Instructions")
+                        .setMessage("Dummy instruction")
+                        .setPositiveButton("Done", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
 
-                Toast.makeText(getApplicationContext(),"Instruction",Toast.LENGTH_SHORT).show();
-                popupMessage = new PopupWindow(layoutOfPopup, ViewGroup.LayoutParams.FILL_PARENT,
-                        ViewGroup.LayoutParams.WRAP_CONTENT);
-                popupMessage.setContentView(layoutOfPopup);
-                //popupMessage.showAsDropDown(popupText,0,0);
+                            }
+                        })
+                        .create()
+                        .show();
+
             }
         });
         if (Utilities.status == 2) {
@@ -105,8 +107,8 @@ public class WelcomePage extends ActionBarActivity {
                 qrCodeImage.setImageBitmap(bitmap);
             }
 
-            if(Utilities.coupon.equals("meh."))
-            new coupTask().execute();
+            if (Utilities.coupon.equals("meh."))
+                new coupTask().execute();
         }
     }
 
@@ -137,7 +139,7 @@ public class WelcomePage extends ActionBarActivity {
             editor.putInt("status", 0);
             editor.putString("user_name", null);
             editor.putString("user_pass", null);
-            editor.putString("coupon",null);
+            editor.putString("coupon", null);
             editor.apply();
             Intent intent = new Intent(WelcomePage.this, SplashScreen.class);
             startActivity(intent);
@@ -216,13 +218,12 @@ public class WelcomePage extends ActionBarActivity {
         protected void onPreExecute() {
 
 
-
         }
 
         @Override
         protected String doInBackground(String... strings) {
             HttpClient httpclient = new DefaultHttpClient();
-            String coupon="no-coupon";
+            String coupon = "no-coupon";
             JSONObject jsonObject;
             HttpPost httppost = new HttpPost(Utilities.url_coup);
             try {
@@ -245,7 +246,7 @@ public class WelcomePage extends ActionBarActivity {
                     Log.e("response", s);
                     Utilities.status = jsonObject.getInt("status");
                     coupon = jsonObject.getString("data");
-                    Utilities.coupon=coupon;
+                    Utilities.coupon = coupon;
 
 
                 } catch (JSONException e) {
@@ -267,7 +268,7 @@ public class WelcomePage extends ActionBarActivity {
             SharedPreferences prefs = Utilities.prefs;
             SharedPreferences.Editor editor = prefs.edit();
 
-            editor.putString("coupon",Utilities.coupon);
+            editor.putString("coupon", Utilities.coupon);
             editor.apply();
 
             couponButton.setText(Utilities.coupon);

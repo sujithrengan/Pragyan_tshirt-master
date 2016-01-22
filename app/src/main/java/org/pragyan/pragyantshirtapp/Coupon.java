@@ -10,15 +10,14 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 
-public class Coupon extends ActionBarActivity implements CouponFragment.OnClickListener,GenderSelectFragment.OnClickListener, SizeSelectFragment.OnClickListener, PreviewFragment.OnClickListener
-{
+public class Coupon extends ActionBarActivity implements CouponFragment.OnClickListener, GenderSelectFragment.OnClickListener, SizeSelectFragment.OnClickListener, PreviewFragment.OnClickListener {
     FragmentManager fm;
     TextView instruction;
-    String instruction_text[] = {"Select your coupon","Tap to flip", "Select gender","Select shirt size" };
+    String instruction_text[] = {"Select your coupon", "Tap to flip", "Select gender", "Select shirt size"};
     int CONFIRMATION_REQUEST = 1;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coupon);
         instruction = (TextView) findViewById(R.id.instructionText);
@@ -52,55 +51,46 @@ public class Coupon extends ActionBarActivity implements CouponFragment.OnClickL
     }
 
     @Override
-    public void CouponToPreview()
-    {
+    public void CouponToPreview() {
         PreviewFragment previewFragment = new PreviewFragment();
         fm.beginTransaction().replace(R.id.frameLayout, previewFragment, "Preview").addToBackStack(null).commit();
         instruction.setText(instruction_text[1]);
     }
 
     @Override
-    public void PreviewToGender()
-    {
-        GenderSelectFragment genderSelectFragment= new GenderSelectFragment();
-        fm.beginTransaction().replace(R.id.frameLayout,genderSelectFragment,"GenderSelect").addToBackStack(null).commit();
+    public void PreviewToGender() {
+        GenderSelectFragment genderSelectFragment = new GenderSelectFragment();
+        fm.beginTransaction().replace(R.id.frameLayout, genderSelectFragment, "GenderSelect").addToBackStack(null).commit();
         instruction.setText(instruction_text[2]);
 
     }
 
     @Override
-    public void GenderToShirtSize()
-    {
+    public void GenderToShirtSize() {
         SizeSelectFragment sizeSelectFragment = new SizeSelectFragment();
         fm.beginTransaction().replace(R.id.frameLayout, sizeSelectFragment, "SizeSelect").addToBackStack(null).commit();
         instruction.setText(instruction_text[3]);
     }
 
     @Override
-    public void OpenConfirmPage()
-    {
-        Intent intent = new Intent(getBaseContext(),ConfirmPage.class);
+    public void OpenConfirmPage() {
+        Intent intent = new Intent(getBaseContext(), ConfirmPage.class);
         startActivityForResult(intent, CONFIRMATION_REQUEST);
     }
 
     @Override
-    public void onBackPressed()
-    {
-        if(fm.getBackStackEntryCount()>0)
-        {
+    public void onBackPressed() {
+        if (fm.getBackStackEntryCount() > 0) {
             fm.popBackStackImmediate();
             instruction.setText(instruction_text[fm.getBackStackEntryCount()]);
-        }
-        else super.onBackPressed();
+        } else super.onBackPressed();
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if(requestCode==CONFIRMATION_REQUEST)
-        {
-            if(resultCode==1)
-            {
-                Intent intent = new Intent(Coupon.this,WelcomePage.class);
+        if (requestCode == CONFIRMATION_REQUEST) {
+            if (resultCode == 1) {
+                Intent intent = new Intent(Coupon.this, WelcomePage.class);
                 startActivity(intent);
                 finish();
             }

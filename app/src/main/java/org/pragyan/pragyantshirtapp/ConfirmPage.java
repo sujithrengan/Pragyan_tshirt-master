@@ -32,7 +32,7 @@ import java.util.List;
 
 public class ConfirmPage extends ActionBarActivity {
 
-    int NetworkState=0;
+    int NetworkState = 0;
     Button button;
 
     @Override
@@ -92,7 +92,7 @@ public class ConfirmPage extends ActionBarActivity {
             JSONObject jsonObject;
             String coupon = null;
 
-            String hash=Sha1.getHash(Utilities.username+"LifeLaEppdiPogudhu");
+            String hash = Sha1.getHash(Utilities.username + "LifeLaEppdiPogudhu");
             try {
                 List nameValuePairs = new ArrayList();
                 nameValuePairs.add(new BasicNameValuePair("user_roll", Utilities.username));
@@ -113,7 +113,7 @@ public class ConfirmPage extends ActionBarActivity {
                     Log.e("response", s);
                     Utilities.status = jsonObject.getInt("status");
                     coupon = jsonObject.getString("data");
-                    Utilities.coupon=coupon;
+                    Utilities.coupon = coupon;
                     NetworkState = 1;
 
                 } catch (JSONException e) {
@@ -125,7 +125,7 @@ public class ConfirmPage extends ActionBarActivity {
             } catch (ClientProtocolException e) {
                 NetworkState = 0;
             } catch (IOException e) {
-            NetworkState=0;
+                NetworkState = 0;
             }
 
             return coupon;
@@ -141,15 +141,15 @@ public class ConfirmPage extends ActionBarActivity {
 
 
                 switch (Utilities.status) {
-                   // case 0:
-                     //   Toast.makeText(ConfirmPage.this, error, Toast.LENGTH_SHORT).show();
-                     //   break;
+                    // case 0:
+                    //   Toast.makeText(ConfirmPage.this, error, Toast.LENGTH_SHORT).show();
+                    //   break;
                     case 2:
                     case 3:
                         SharedPreferences prefs = Utilities.prefs;
                         SharedPreferences.Editor editor = prefs.edit();
                         editor.putInt("status", Utilities.status);
-                        editor.putString("coupon",Utilities.coupon);
+                        editor.putString("coupon", Utilities.coupon);
                         editor.apply();
                         setResult(1);
                         finish();
