@@ -2,32 +2,32 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\kaushiksamba\Downloads\Pragyan_tshirt-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\libs\internal_impl-22.1.1.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
-        <dex dex="C:\Users\kaushiksamba\Downloads\Pragyan_tshirt-master\app\build\intermediates\pre-dexed\debug\internal_impl-22.1.1-5ad9d6d90f090138ca21a85d9dc31c1e680f29a1.jar" />
-    </item>
-    <item
-        jar="C:\Users\kaushiksamba\Downloads\Pragyan_tshirt-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
-        <dex dex="C:\Users\kaushiksamba\Downloads\Pragyan_tshirt-master\app\build\intermediates\pre-dexed\debug\classes-d28ffcf02cd732eb913247ea7d686f2fc26c5f89.jar" />
-    </item>
-    <item
-        jar="C:\Users\kaushiksamba\Downloads\Pragyan_tshirt-master\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.1.1\jars\classes.jar"
+        jar="F:\Android\GitHub\Pragyan_tshirt-master\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.1.1\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
-        <dex dex="C:\Users\kaushiksamba\Downloads\Pragyan_tshirt-master\app\build\intermediates\pre-dexed\debug\classes-1dffed8a892acd7c4818c5a62d2c634cbfa4142a.jar" />
+        <dex dex="F:\Android\GitHub\Pragyan_tshirt-master\app\build\intermediates\pre-dexed\debug\classes-6688b09fca9eca68d3a473238c7a7d985fc2c747.jar" />
     </item>
     <item
-        jar="C:\Users\kaushiksamba\AppData\Local\Android\sdk1\extras\android\m2repository\com\android\support\support-annotations\22.1.1\support-annotations-22.1.1.jar"
+        jar="F:\Android\GitHub\Pragyan_tshirt-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
+        <dex dex="F:\Android\GitHub\Pragyan_tshirt-master\app\build\intermediates\pre-dexed\debug\classes-8e2467737f6c0f58b159cccc421b7f3beff8e6b1.jar" />
+    </item>
+    <item
+        jar="F:\Android\GitHub\Pragyan_tshirt-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\libs\internal_impl-22.1.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
+        <dex dex="F:\Android\GitHub\Pragyan_tshirt-master\app\build\intermediates\pre-dexed\debug\internal_impl-22.1.1-689fa855f06f302ee97545cbf91ca9290e5672c9.jar" />
+    </item>
+    <item
+        jar="F:\Android\android-studio\sdk\extras\android\m2repository\com\android\support\support-annotations\22.1.1\support-annotations-22.1.1.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
-        <dex dex="C:\Users\kaushiksamba\Downloads\Pragyan_tshirt-master\app\build\intermediates\pre-dexed\debug\support-annotations-22.1.1-bc9250ed3523f36c465e598b6a48c6dd10d968d4.jar" />
+        <dex dex="F:\Android\GitHub\Pragyan_tshirt-master\app\build\intermediates\pre-dexed\debug\support-annotations-22.1.1-0ef99e1c31d63b78ce0e31d9bf76b79816c9fb60.jar" />
     </item>
 
 </items>
