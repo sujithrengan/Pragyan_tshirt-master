@@ -22,6 +22,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -64,12 +65,12 @@ public class LoginActivity extends Activity {
         screen_height =Utilities.screen_height= displaymetrics.heightPixels;
         screen_width =Utilities.screen_width= displaymetrics.widthPixels;
         handleButtonClick();
-        //animatebg();
+        animatebg();
     }
 
     private void animatebg()
     {
-        final LinearLayout l2=(LinearLayout)findViewById(R.id.bg);
+        final ImageView l2=(ImageView)findViewById(R.id.bg);
 
         //Animation anim = AnimationUtils.loadAnimation(this, R.anim.translater);
         //Animation animr = AnimationUtils.loadAnimation(this, R.anim.translate);
