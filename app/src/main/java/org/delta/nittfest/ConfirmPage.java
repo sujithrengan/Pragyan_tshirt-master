@@ -1,7 +1,6 @@
-package org.pragyan.pragyantshirtapp;
+package org.delta.nittfest;
 
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;

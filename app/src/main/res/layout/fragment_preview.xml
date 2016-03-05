@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="org.pragyan.pragyantshirtapp.PreviewFragment">
+    tools:context="org.delta.nittfest.PreviewFragment">
 
     <ImageView
         android:id="@+id/previewImageView"

@@ -1,7 +1,6 @@
-package org.pragyan.pragyantshirtapp;
+package org.delta.nittfest;
 
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.ClipData;
 import android.content.ClipboardManager;
@@ -20,7 +19,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -93,7 +91,7 @@ public class WelcomePage extends ActionBarActivity {
                             }
                         })
                         .create()
-                        .show();
+                        .show();                                                    
 
             }
         });

@@ -1,4 +1,4 @@
-package org.pragyan.pragyantshirtapp;
+package org.delta.nittfest;
 
 /**
  * Created by HP on 19-01-2016.

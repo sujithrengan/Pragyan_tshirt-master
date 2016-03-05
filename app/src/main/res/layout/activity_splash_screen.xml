@@ -7,7 +7,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@color/pragyan_dark_grey"
-    tools:context="org.pragyan.pragyantshirtapp.SplashScreen">
+    tools:context="org.delta.nittfest.SplashScreen">
 
 
 

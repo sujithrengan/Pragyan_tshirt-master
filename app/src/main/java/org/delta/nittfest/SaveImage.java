@@ -1,4 +1,4 @@
-package org.pragyan.pragyantshirtapp;
+package org.delta.nittfest;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

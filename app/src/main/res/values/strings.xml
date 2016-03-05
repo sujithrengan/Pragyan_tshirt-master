@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Pragyan App</string>
+    <string name="app_name">NITTFEST</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
@@ -10,5 +10,5 @@
     <string name="title_activity_splash_screen">SplashScreen</string>
     <string name="title_activity_nived">nived</string>
     <string name="title_activity_kjasfsa">kjasfsa</string>
-    <string name="Love"><![CDATA[Made with <3 by Delta Force]]></string>
+    <string name="Love">Made with \u2665 by Delta Force</string>
 </resources>

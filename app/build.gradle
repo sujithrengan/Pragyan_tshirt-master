@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "22.0.1"
+    compileSdkVersion 22
+    buildToolsVersion "23.0.2"
     defaultConfig {
-        applicationId 'org.pragyan.pragyantshirtapp'
+        applicationId 'org.delta.nittfest'
         minSdkVersion 15
         targetSdkVersion 22
         versionCode 1
