@@ -16,7 +16,7 @@
         android:textSize="30sp"
         android:text="Rs 550\n\nFood"
         android:background="@drawable/button_style"
-        android:textColor="@color/pragyan_dark_grey"
+        android:textColor="@drawable/btnlog"
         android:layout_weight="1"
         android:layout_margin="10dp"
         />
@@ -29,7 +29,7 @@
         android:layout_margin="10dp"
         android:textSize="30sp"
         android:background="@drawable/button_style"
-        android:textColor="@color/pragyan_dark_grey"
+        android:textColor="@drawable/btnlog"
         android:layout_weight="1"
         />
 

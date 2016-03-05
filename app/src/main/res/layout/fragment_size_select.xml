@@ -21,7 +21,7 @@
             android:layout_weight="1"
             android:id="@+id/SizeS"
             android:background="@drawable/button_style"
-            android:textColor="@color/pragyan_dark_grey"
+            android:textColor="@drawable/btnlog"
             android:textSize="40sp" />
         <Button
             android:layout_width="fill_parent"
@@ -31,7 +31,7 @@
             android:layout_weight="1"
             android:id="@+id/SizeM"
             android:background="@drawable/button_style"
-            android:textColor="@color/pragyan_dark_grey"
+            android:textColor="@drawable/btnlog"
             android:textSize="40sp" />
         <Button
             android:layout_width="fill_parent"
@@ -41,7 +41,7 @@
             android:layout_weight="1"
             android:id="@+id/SizeL"
             android:background="@drawable/button_style"
-            android:textColor="@color/pragyan_dark_grey"
+            android:textColor="@drawable/btnlog"
             android:textSize="40sp" />
     </LinearLayout>
 
@@ -59,7 +59,7 @@
             android:text="XL"
             android:layout_weight="1"
             android:background="@drawable/button_style"
-            android:textColor="@color/pragyan_dark_grey"
+            android:textColor="@drawable/btnlog"
             android:id="@+id/SizeXL"
             android:textSize="40sp" />
         <Button
@@ -68,7 +68,7 @@
             android:layout_margin="5dp"
             android:text="XXL"
             android:background="@drawable/button_style"
-            android:textColor="@color/pragyan_dark_grey"
+            android:textColor="@drawable/btnlog"
             android:layout_weight="1"
             android:id="@+id/SizeXXL"
             android:textSize="40sp" />

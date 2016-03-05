@@ -6,16 +6,23 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.BounceInterpolator;
+import android.view.animation.LinearInterpolator;
+import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import org.apache.http.HttpEntity;
@@ -39,7 +46,9 @@ public class LoginActivity extends Activity {
     String password;
     EditText rollNumberText, passwordText;
     Button button;
-
+    private int screen_height;
+    private int screen_width;
+    private Handler myHandler;
 
 
     @Override
@@ -48,7 +57,35 @@ public class LoginActivity extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.login_screen);
+
+        myHandler = new Handler();
+        DisplayMetrics displaymetrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+        screen_height =Utilities.screen_height= displaymetrics.heightPixels;
+        screen_width =Utilities.screen_width= displaymetrics.widthPixels;
         handleButtonClick();
+        //animatebg();
+    }
+
+    private void animatebg()
+    {
+        final LinearLayout l2=(LinearLayout)findViewById(R.id.bg);
+
+        //Animation anim = AnimationUtils.loadAnimation(this, R.anim.translater);
+        //Animation animr = AnimationUtils.loadAnimation(this, R.anim.translate);
+        //anim.reset();
+
+        final Animation animation = new TranslateAnimation(screen_width,0,0, 0);
+        animation.setDuration(300);
+        animation.setRepeatMode(Animation.INFINITE);
+
+        animation.setInterpolator(new LinearInterpolator());
+        myHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+               l2.startAnimation(animation);
+            }
+        }, 500);
     }
 
     private void handleButtonClick() {
@@ -66,8 +103,13 @@ public class LoginActivity extends Activity {
                     password = passwordText.getText().toString();
                     //Pass rollNumber and password to the server
 
-                    new myAsyncTask().execute();
 
+
+                    //new myAsyncTask().execute();
+                    //Testing
+
+                    Intent i = new Intent(LoginActivity.this, Coupon.class);
+                    LoginActivity.this.startActivity(i);
 
                     button.setClickable(false);
                 }

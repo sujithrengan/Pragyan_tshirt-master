@@ -15,6 +15,8 @@ public class Utilities {
     public static String url_reg = "http://api.pragyan.org/tshirt/register";
     public static String url_qr = "http://api.pragyan.org/tshirt/qrcode";
     public static String url_coup = "http://api.pragyan.org/tshirt/getcoupon";
+    public static int screen_height;
+    public static int screen_width;
 
     public static void init() {
         username = password = shirtSize = gender = null;

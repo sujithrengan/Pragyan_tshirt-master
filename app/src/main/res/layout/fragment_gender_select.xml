@@ -14,7 +14,7 @@
         android:textSize="40sp"
         android:background="@drawable/button_style"
         android:layout_margin="10dp"
-        android:textColor="@color/pragyan_dark_grey"
+
         />
 
     <Button
@@ -26,6 +26,6 @@
         android:text="F"
         android:textSize="40sp"
         android:background="@drawable/button_style"
-        android:textColor="@color/pragyan_dark_grey"
+
         />
 </LinearLayout>
