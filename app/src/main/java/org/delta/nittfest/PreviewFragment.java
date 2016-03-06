@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import org.polites.android.GestureImageView;
 
 public class PreviewFragment extends Fragment {
     View view;
@@ -36,13 +35,13 @@ public class PreviewFragment extends Fragment {
 
 
     public void handleButtonClicks() {
-        final GestureImageView imageView = (GestureImageView) view.findViewById(R.id.popupimage);
+        final ImageView imageView = (ImageView) view.findViewById(R.id.popupimage);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (times % 2 == 0) {
-                    imageView.setImageResource(R.drawable.app_back);
-                } else imageView.setImageResource(R.drawable.app_front);
+                    imageView.setImageResource(R.drawable.app_front);
+                } else imageView.setImageResource(R.drawable.app_back);
                 times++;
 
             }

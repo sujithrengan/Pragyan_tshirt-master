@@ -12,15 +12,12 @@
 
 
 
-    <org.polites.android.GestureImageView
+    <ImageView
 
         android:id="@+id/popupimage"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="10"
-        gesture-image:min-scale="0.2"
-        gesture-image:max-scale="6.0"
-        gesture-image:strict="false"
+        android:layout_weight="20"
         android:src="@drawable/app_front"
         />
 
