@@ -13,6 +13,7 @@
         android:layout_weight="1"
         android:textSize="40sp"
         android:background="@drawable/button_style"
+        android:textColor="@drawable/btnlog"
         android:layout_margin="10dp"
 
         />
@@ -23,6 +24,7 @@
         android:layout_weight="1"
         android:id="@+id/female"
         android:layout_margin="10dp"
+        android:textColor="@drawable/btnlog"
         android:text="F"
         android:textSize="40sp"
         android:background="@drawable/button_style"

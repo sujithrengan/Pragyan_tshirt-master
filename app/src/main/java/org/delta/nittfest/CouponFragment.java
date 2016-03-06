@@ -2,6 +2,7 @@ package org.delta.nittfest;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,6 +40,9 @@ public class CouponFragment extends Fragment {
     private void handleButtonClicks() {
         Button button500 = (Button) view.findViewById(R.id.Rs550);
         Button button700 = (Button) view.findViewById(R.id.Rs700);
+
+        button500.setTypeface(Utilities.typefaceR);
+        button700.setTypeface(Utilities.typefaceR);
         button500.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

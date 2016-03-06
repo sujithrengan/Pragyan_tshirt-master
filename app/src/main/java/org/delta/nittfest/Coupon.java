@@ -21,6 +21,7 @@ public class Coupon extends ActionBarActivity implements CouponFragment.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coupon);
         instruction = (TextView) findViewById(R.id.instructionText);
+        instruction.setTypeface(Utilities.typefaceR);
         instruction.setText(instruction_text[0]);
         CouponFragment fragment = new CouponFragment();
         fm = getFragmentManager();

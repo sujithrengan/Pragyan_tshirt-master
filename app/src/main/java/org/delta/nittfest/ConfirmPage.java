@@ -45,8 +45,10 @@ public class ConfirmPage extends ActionBarActivity {
     private void setTextOnScreen() {
         TextView rollNumber = (TextView) findViewById(R.id.rollNumber);
         rollNumber.setText(Utilities.username);
+        rollNumber.setTypeface(Utilities.typefaceR);
         TextView coupon = (TextView) findViewById(R.id.coupon);
-        coupon.setText("Rs. " + Integer.toString(Utilities.amount));
+        coupon.setText("\u20B9 " + Integer.toString(Utilities.amount));
+        coupon.setTypeface(Utilities.typefaceR);
         if (Utilities.amount == 700) {
             LinearLayout genderLayout = (LinearLayout) findViewById(R.id.genderLayout);
             genderLayout.setVisibility(View.VISIBLE);
@@ -54,8 +56,11 @@ public class ConfirmPage extends ActionBarActivity {
             sizeLayout.setVisibility(View.VISIBLE);
             TextView gender = (TextView) findViewById(R.id.gender);
             gender.setText(Utilities.gender.toUpperCase());
+            gender.setTypeface(Utilities.typefaceR);
             TextView shirtSize = (TextView) findViewById(R.id.shirtSize);
             shirtSize.setText(Utilities.shirtSize);
+            shirtSize.setTypeface(Utilities.typefaceR);
+
         }
     }
 

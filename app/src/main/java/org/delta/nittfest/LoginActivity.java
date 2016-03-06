@@ -24,6 +24,7 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.apache.http.HttpEntity;
@@ -64,8 +65,9 @@ public class LoginActivity extends Activity {
         getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
         screen_height =Utilities.screen_height= displaymetrics.heightPixels;
         screen_width =Utilities.screen_width= displaymetrics.widthPixels;
+
         handleButtonClick();
-        animatebg();
+        //animatebg();
     }
 
     private void animatebg()
@@ -92,6 +94,8 @@ public class LoginActivity extends Activity {
     private void handleButtonClick() {
         rollNumberText = (EditText) findViewById(R.id.rollNumber);
         passwordText = (EditText) findViewById(R.id.password);
+        rollNumberText.setTypeface(Utilities.typefaceR);
+        passwordText.setTypeface(Utilities.typefaceR);
         button = (Button) findViewById(R.id.signInButton);
 
         button.setOnClickListener(new View.OnClickListener() {

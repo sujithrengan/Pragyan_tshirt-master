@@ -1,4 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:gesture-image="http://schemas.polites.com/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,13 +10,18 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="org.delta.nittfest.PreviewFragment">
 
-    <ImageView
-        android:id="@+id/previewImageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:src="@drawable/app_front"
 
+
+    <org.polites.android.GestureImageView
+
+        android:id="@+id/popupimage"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        gesture-image:min-scale="0.2"
+        gesture-image:max-scale="6.0"
+        gesture-image:strict="false"
+        android:src="@drawable/app_front"
         />
 
     <Button
@@ -26,6 +32,6 @@
         android:background="@drawable/button_style"
         android:text="CONTINUE"
         android:textColor="@drawable/btnlog"
-        android:textSize="25sp" />
+        android:textSize="22sp" />
 
 </LinearLayout>
